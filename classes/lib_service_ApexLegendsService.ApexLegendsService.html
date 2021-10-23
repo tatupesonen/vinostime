@@ -81,6 +81,9 @@
 									<a href="lib_service_ApexLegendsService.ApexLegendsService.html#constructor" class="tsd-kind-icon">constructor</a>
 								</li>
 								<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+									<a href="lib_service_ApexLegendsService.ApexLegendsService.html#getEmoji" class="tsd-kind-icon">get<wbr>Emoji</a>
+								</li>
+								<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 									<a href="lib_service_ApexLegendsService.ApexLegendsService.html#getMap" class="tsd-kind-icon">get<wbr>Map</a>
 								</li>
 								<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -104,7 +107,13 @@
 						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_commands_deploy.html">lib/commands/deploy</a>
 						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_commands_help.html">lib/commands/help</a>
+						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_container_container.html">lib/container/container</a>
+						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_interfaces_BotInfo.html">lib/interfaces/<wbr>Bot<wbr>Info</a>
+						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_interfaces_IApexLegendsService.html">lib/interfaces/IApex<wbr>Legends<wbr>Service</a>
 						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_interfaces_IApexMapData.html">lib/interfaces/IApex<wbr>Map<wbr>Data</a>
 						</li>                        <li class=" tsd-kind-module">
@@ -129,6 +138,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/lib_interfaces_IApexLegendsService.IApexLegendsService.html" class="tsd-signature-type">IApexLegendsService</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
@@ -144,6 +159,13 @@
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
+							<div class="tsd-navigation secondary">
+								<ul>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private">
+										<a href="lib_service_ApexLegendsService.ApexLegendsService.html#getEmoji" class="tsd-kind-icon">get<wbr>Emoji</a>
+									</li>
+								</ul>
+							</div>
 							<div class="tsd-navigation secondary">
 								<ul>
 									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -168,25 +190,39 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Apex<wbr>Legends<wbr>Service<span class="tsd-signature-symbol">(</span>_container<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_service_ApexLegendsService.ApexLegendsService.html" class="tsd-signature-type">ApexLegendsService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Apex<wbr>Legends<wbr>Service<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><a href="lib_container_container.Container.html" class="tsd-signature-type">Container</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_service_ApexLegendsService.ApexLegendsService.html" class="tsd-signature-type">ApexLegendsService</a></li>
 					</ul>
 					<h4 class="tsd-parameters-title">Parameters</h4>
 					<ul class="tsd-parameters">
 						<li>
-							<span class="name">_container</span>: <span class="tsd-signature-type">Container</span> <span class="tsd-flag ts-flagOptional">Optional</span>
+							<span class="name">container</span>: <a href="lib_container_container.Container.html" class="tsd-signature-type">Container</a>
 						</li>
 					</ul>
 					<h4 class="tsd-returns-title">Returns <a href="lib_service_ApexLegendsService.ApexLegendsService.html" class="tsd-signature-type">ApexLegendsService</a></h4>
 					</ul>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/49421c6/src/lib/service/ApexLegendsService.ts#L7">src/lib/service/ApexLegendsService.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/798113b/src/lib/service/ApexLegendsService.ts#L10">src/lib/service/ApexLegendsService.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-descriptions">
+					<a name="getEmoji" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Emoji</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Emoji<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TextConvertable</span></li>
+					</ul>
+					<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TextConvertable</span>    </h4>
+					</ul>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/798113b/src/lib/service/ApexLegendsService.ts#L18">src/lib/service/ApexLegendsService.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-descriptions">
 					<a name="getMap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Map</h3>
@@ -197,7 +233,7 @@
 					</ul>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/49421c6/src/lib/service/ApexLegendsService.ts#L8">src/lib/service/ApexLegendsService.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/798113b/src/lib/service/ApexLegendsService.ts#L11">src/lib/service/ApexLegendsService.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -210,8 +246,9 @@
 					<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">MessageEmbed</span><span class="tsd-signature-symbol">&gt;</span>    </h4>
 					</ul>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/lib_interfaces_IApexLegendsService.IApexLegendsService.html">IApexLegendsService</a>.<a href="../interfaces/lib_interfaces_IApexLegendsService.IApexLegendsService.html#getMapEmbed">getMapEmbed</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/49421c6/src/lib/service/ApexLegendsService.ts#L15">src/lib/service/ApexLegendsService.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/tatupesonen/vinostime/blob/798113b/src/lib/service/ApexLegendsService.ts#L23">src/lib/service/ApexLegendsService.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>

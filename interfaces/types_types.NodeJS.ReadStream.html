@@ -81,6 +81,9 @@
 							<a href="types_types.NodeJS.ReadStream.html" class="tsd-kind-icon">Read<wbr>Stream</a>
 							<ul>
 								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+									<a href="types_types.NodeJS.ReadStream.html#allowHalfOpen" class="tsd-kind-icon">allow<wbr>Half<wbr>Open</a>
+								</li>
+								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 									<a href="types_types.NodeJS.ReadStream.html#bufferSize" class="tsd-kind-icon">buffer<wbr>Size</a>
 								</li>
 								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
@@ -109,6 +112,12 @@
 								</li>
 								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 									<a href="types_types.NodeJS.ReadStream.html#readable" class="tsd-kind-icon">readable</a>
+								</li>
+								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+									<a href="types_types.NodeJS.ReadStream.html#readableAborted" class="tsd-kind-icon">readable<wbr>Aborted</a>
+								</li>
+								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+									<a href="types_types.NodeJS.ReadStream.html#readableDidRead" class="tsd-kind-icon">readable<wbr>Did<wbr>Read</a>
 								</li>
 								<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 									<a href="types_types.NodeJS.ReadStream.html#readableEncoding" class="tsd-kind-icon">readable<wbr>Encoding</a>
@@ -314,7 +323,13 @@
 						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_commands_deploy.html">lib/commands/deploy</a>
 						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_commands_help.html">lib/commands/help</a>
+						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_container_container.html">lib/container/container</a>
+						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_interfaces_BotInfo.html">lib/interfaces/<wbr>Bot<wbr>Info</a>
+						</li>                        <li class=" tsd-kind-module">
+						<a href="../modules/lib_interfaces_IApexLegendsService.html">lib/interfaces/IApex<wbr>Legends<wbr>Service</a>
 						</li>                        <li class=" tsd-kind-module">
 						<a href="../modules/lib_interfaces_IApexMapData.html">lib/interfaces/IApex<wbr>Map<wbr>Data</a>
 						</li>                        <li class=" tsd-kind-module">
@@ -354,6 +369,13 @@
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-inherited tsd-is-external">
 							<h3>Properties</h3>
+							<div class="tsd-navigation secondary">
+								<ul>
+									<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+										<a href="types_types.NodeJS.ReadStream.html#allowHalfOpen" class="tsd-kind-icon">allow<wbr>Half<wbr>Open</a>
+									</li>
+								</ul>
+							</div>
 							<div class="tsd-navigation secondary">
 								<ul>
 									<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
@@ -421,6 +443,20 @@
 								<ul>
 									<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 										<a href="types_types.NodeJS.ReadStream.html#readable" class="tsd-kind-icon">readable</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tsd-navigation secondary">
+								<ul>
+									<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+										<a href="types_types.NodeJS.ReadStream.html#readableAborted" class="tsd-kind-icon">readable<wbr>Aborted</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tsd-navigation secondary">
+								<ul>
+									<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+										<a href="types_types.NodeJS.ReadStream.html#readableDidRead" class="tsd-kind-icon">readable<wbr>Did<wbr>Read</a>
 									</li>
 								</ul>
 							</div>
@@ -868,6 +904,31 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
+					<a name="allowHalfOpen" class="tsd-anchor"></a>
+					<h3>allow<wbr>Half<wbr>Open</h3>
+					<div class="tsd-signature tsd-kind-icon">allowHalfOpen<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<div class="tsd-comment">
+						<div class="lead">
+							<p>If <code>false</code> then the stream will automatically end the writable side when the
+								readable side ends. Set initially by the <code>allowHalfOpen</code> constructor option,
+							which defaults to <code>false</code>.</p>
+						</div>
+						<p>This can be changed manually to change the half-open behavior of an existing<code>Duplex</code> stream instance, but must be changed before the <code>&#39;end&#39;</code> event is
+						emitted.</p>
+					</div>
+					<div class="tsd-comment">
+						<h4>since</h4>
+						<p><p>v0.9.4</p>
+						</p>
+					</div>
+					<aside class="tsd-sources">
+						<p>Inherited from tty.ReadStream.allowHalfOpen</p>
+						<ul>
+							<li>Defined in node_modules/@types/node/stream.d.ts:819</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
 					<a name="bufferSize" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> buffer<wbr>Size</h3>
 					<div class="tsd-signature tsd-kind-icon">bufferSize<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1030,7 +1091,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
 					<a name="localAddress" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> local<wbr>Address</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> local<wbr>Address</h3>
 					<div class="tsd-signature tsd-kind-icon">localAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<div class="tsd-comment">
 						<div class="lead">
@@ -1053,7 +1114,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
 					<a name="localPort" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> local<wbr>Port</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> local<wbr>Port</h3>
 					<div class="tsd-signature tsd-kind-icon">localPort<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<div class="tsd-comment">
 						<div class="lead">
@@ -1090,7 +1151,53 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readable</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:59</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:71</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
+					<a name="readableAborted" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> readable<wbr>Aborted</h3>
+					<div class="tsd-signature tsd-kind-icon">readableAborted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<div class="tsd-comment">
+						<div class="lead">
+							<p>Returns whether the stream was destroyed or errored before emitting <code>&#39;end&#39;</code>.</p>
+						</div>
+					</div>
+					<div class="tsd-comment">
+						<h4>since</h4>
+						<p><p>v16.8.0</p>
+						</p>
+						<h4>experimental</h4>
+						<p></p>
+					</div>
+					<aside class="tsd-sources">
+						<p>Inherited from tty.ReadStream.readableAborted</p>
+						<ul>
+							<li>Defined in node_modules/@types/node/stream.d.ts:65</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external tsd-descriptions">
+					<a name="readableDidRead" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> readable<wbr>Did<wbr>Read</h3>
+					<div class="tsd-signature tsd-kind-icon">readableDidRead<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<div class="tsd-comment">
+						<div class="lead">
+							<p>Returns whether <code>&#39;data&#39;</code> has been emitted.</p>
+						</div>
+					</div>
+					<div class="tsd-comment">
+						<h4>since</h4>
+						<p><p>v16.7.0</p>
+						</p>
+						<h4>experimental</h4>
+						<p></p>
+					</div>
+					<aside class="tsd-sources">
+						<p>Inherited from tty.ReadStream.readableDidRead</p>
+						<ul>
+							<li>Defined in node_modules/@types/node/stream.d.ts:77</li>
 						</ul>
 					</aside>
 				</section>
@@ -1111,7 +1218,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableEncoding</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:64</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:82</li>
 						</ul>
 					</aside>
 				</section>
@@ -1132,7 +1239,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableEnded</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:69</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:87</li>
 						</ul>
 					</aside>
 				</section>
@@ -1154,7 +1261,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableFlowing</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:75</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:93</li>
 						</ul>
 					</aside>
 				</section>
@@ -1175,7 +1282,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableHighWaterMark</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:80</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:98</li>
 						</ul>
 					</aside>
 				</section>
@@ -1198,7 +1305,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableLength</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:87</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:105</li>
 						</ul>
 					</aside>
 				</section>
@@ -1219,7 +1326,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.readableObjectMode</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:92</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:110</li>
 						</ul>
 					</aside>
 				</section>
@@ -1294,7 +1401,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writable</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:785</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:803</li>
 						</ul>
 					</aside>
 				</section>
@@ -1305,7 +1412,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableCorked</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:791</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:809</li>
 						</ul>
 					</aside>
 				</section>
@@ -1316,7 +1423,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableEnded</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:786</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:804</li>
 						</ul>
 					</aside>
 				</section>
@@ -1327,7 +1434,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableFinished</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:787</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:805</li>
 						</ul>
 					</aside>
 				</section>
@@ -1338,7 +1445,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableHighWaterMark</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:788</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:806</li>
 						</ul>
 					</aside>
 				</section>
@@ -1349,7 +1456,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableLength</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:789</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:807</li>
 						</ul>
 					</aside>
 				</section>
@@ -1360,7 +1467,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.writableObjectMode</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:790</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:808</li>
 						</ul>
 					</aside>
 				</section>
@@ -1378,7 +1485,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.__@asyncIterator@3278</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:461</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:479</li>
 						</ul>
 					</aside>
 				</section>
@@ -1417,7 +1524,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._construct</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:99</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:117</li>
 						</ul>
 					</aside>
 				</section>
@@ -1459,7 +1566,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._destroy</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:801</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:851</li>
 						</ul>
 					</aside>
 				</section>
@@ -1498,7 +1605,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._final</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:802</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:852</li>
 						</ul>
 					</aside>
 				</section>
@@ -1519,7 +1626,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._read</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:100</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:118</li>
 						</ul>
 					</aside>
 				</section>
@@ -1564,7 +1671,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._write</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:793</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:843</li>
 						</ul>
 					</aside>
 				</section>
@@ -1606,7 +1713,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream._writev</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:794</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:844</li>
 						</ul>
 					</aside>
 				</section>
@@ -2069,7 +2176,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.cork</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:809</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:859</li>
 						</ul>
 					</aside>
 				</section>
@@ -2102,7 +2209,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.destroy</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:393</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:411</li>
 						</ul>
 					</aside>
 				</section>
@@ -2389,7 +2496,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.isPaused</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:260</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:278</li>
 						</ul>
 					</aside>
 				</section>
@@ -3108,7 +3215,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.pipe</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:23</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:24</li>
 						</ul>
 					</aside>
 				</section>
@@ -3696,7 +3803,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.push</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:380</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:398</li>
 						</ul>
 					</aside>
 				</section>
@@ -3829,7 +3936,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.read</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:177</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:195</li>
 						</ul>
 					</aside>
 				</section>
@@ -4093,7 +4200,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.removeListener</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:453</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:471</li>
 						</ul>
 					</aside>
 				</section>
@@ -4135,7 +4242,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.setDefaultEncoding</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:805</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:855</li>
 						</ul>
 					</aside>
 				</section>
@@ -4365,7 +4472,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.uncork</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:810</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:860</li>
 						</ul>
 					</aside>
 				</section>
@@ -4411,7 +4518,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.unpipe</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:287</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:305</li>
 						</ul>
 					</aside>
 				</section>
@@ -4521,7 +4628,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.unshift</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:353</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:371</li>
 						</ul>
 					</aside>
 				</section>
@@ -4566,7 +4673,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from tty.ReadStream.wrap</p>
 						<ul>
-							<li>Defined in node_modules/@types/node/stream.d.ts:379</li>
+							<li>Defined in node_modules/@types/node/stream.d.ts:397</li>
 						</ul>
 					</aside>
 				</section>
