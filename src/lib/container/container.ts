@@ -1,6 +1,9 @@
 export const DITypes = {
   client: 'client',
   apexLegendsService: 'apexLegendsService',
+  commands: 'commands',
+  prefix: 'prefix',
+  botInfo: 'botInfo',
 } as const;
 
 export type Constr<T> = new (...args: unknown[]) => T;

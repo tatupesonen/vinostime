@@ -1,18 +1,19 @@
 import { ApplicationCommandData, Client } from 'discord.js';
-import { COMMANDS } from '../bot';
+import { DITypes } from '../container/container';
 
-import { COMMAND_TYPE } from '../interfaces/ICommand';
+import { COMMAND_TYPE, ICommands } from '../interfaces/ICommand';
 import { createCommand } from '../util/createCommand';
 
 const DeployCommand = createCommand({
   name: 'deploy',
-  description: "Deploys the bot's slash commands and context menus",
+  description: "Deploys the bot's slash commands and context menus **(bot owner only)**",
   type: COMMAND_TYPE.LEGACY,
   async execute(interaction, container) {
+    const commands = container.getByKey<ICommands>(DITypes.commands);
     // Get dependencies
     const client = container.getByKey<Client>('client');
     if (interaction.author.id !== process.env.OWNER) return;
-    const slashCommands: ApplicationCommandData[] = Object.entries(COMMANDS)
+    const slashCommands: ApplicationCommandData[] = Object.entries(commands)
       .filter(
         ([_, value]) =>
           value.type === COMMAND_TYPE.CHANNEL ||

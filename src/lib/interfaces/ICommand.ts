@@ -31,3 +31,5 @@ interface Mapped {
   [COMMAND_TYPE.SLASH]: ContextMenuInteraction;
   [COMMAND_TYPE.LEGACY]: Message;
 }
+
+export type ICommands = Record<string, ICommand<COMMAND_TYPE>>;

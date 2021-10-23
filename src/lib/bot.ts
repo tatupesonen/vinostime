@@ -1,19 +1,13 @@
 import { Client, Intents } from 'discord.js';
-import { readdirSync } from 'fs';
-import { COMMAND_TYPE, ICommand } from './interfaces/ICommand';
-import { Container } from './container/container';
+import { Container, DITypes } from './container/container';
+import { ICommands } from './interfaces/ICommand';
 import { logger } from './util/logger';
 
-export const COMMANDS: Record<string, ICommand<COMMAND_TYPE>> = {};
 export const createBot = async (container: Container) => {
   // Let's load all the commands.
-  const commandFiles = readdirSync(`${__dirname}/commands`);
-  commandFiles.forEach(async (item) => {
-    const command = await require(`./commands/${item}`);
-    COMMANDS[command.default.name] = command.default;
-    logger.verbose('Imported command ' + command.default.name);
+  const commands = container.getByKey<ICommands>(DITypes.commands);
 
-  });
+  const prefix = container.getByKey<string>(DITypes.prefix);
 
   //? The required intents for "messageCreate" and "messageReactionAdd". Events currently listened to
   const client = new Client({
@@ -21,12 +15,14 @@ export const createBot = async (container: Container) => {
     allowedMentions: { repliedUser: true },
     partials: ['CHANNEL'],
   });
-  
+
   client.on('ready', async () => {
     logger.info('Bot ready');
+    client.user.setActivity('En lähtis haastaa', {
+      type: 'STREAMING',
+      url: 'https://www.twitch.tv/Tiki64',
+    });
   });
-
-  const prefix = 'vinos!';
 
   client.on('guildCreate', async (guild) => {
     logger.info(`Joined a new guild! ${guild.name}, ${guild.id}`);
@@ -50,8 +46,8 @@ export const createBot = async (container: Container) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const [command, ...commandArgs] = args;
     // Find command from args and run execute
-    if (COMMANDS[command]) {
-      return COMMANDS[command].execute(message, container, commandArgs);
+    if (commands[command]) {
+      return commands[command].execute(message, container, commandArgs);
     }
     logger.warn(
       `${message.author.username}: [${message.author.id}] tried to run nonexistent command ${prefix}${command}`
@@ -61,8 +57,8 @@ export const createBot = async (container: Container) => {
   client.on('interactionCreate', async (interaction) => {
     if (interaction.isContextMenu() || interaction.isCommand()) {
       try {
-        if (COMMANDS[interaction.commandName]) {
-          COMMANDS[interaction.commandName].execute(interaction, container);
+        if (commands[interaction.commandName]) {
+          commands[interaction.commandName].execute(interaction, container);
           logger.info(
             `${interaction.user.username}: [${interaction.user.id}] ran command ${interaction.commandName}`
           );
