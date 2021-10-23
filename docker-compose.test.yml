@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  test:
+    container_name: vinostime
+    build:
+      context: .
+      target: test
+    image: vinostime
