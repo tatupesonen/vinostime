@@ -1,0 +1,14 @@
+.idea/*
+.nyc_output
+build
+node_modules
+test
+src/**.js
+coverage
+*.log
+logs/
+vinostime-logs/
+package-lock.json
+.env
+.DS_Store
+temp/
