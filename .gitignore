@@ -9,6 +9,7 @@ coverage
 logs/
 vinostime-logs/
 package-lock.json
+.husky/
 .env
 .DS_Store
 temp/
