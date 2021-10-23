@@ -15,8 +15,9 @@ export class ApexLegendsService {
   public async getMapEmbed(): Promise<MessageEmbed> {
     const mapData = await this.getMap();
     const embed = new MessageEmbed();
+    const title = mapData.battle_royale.current.map === "Kings Canyon" ? "HYI SÄÄTÄNÄ" : mapData.battle_royale.current.map;
     embed.setImage(mapData.battle_royale.current.asset);
-    embed.setTitle(mapData.battle_royale.current.map);
+    embed.setTitle(title);
     const fields: EmbedField[] = [{
       name: "Time left",
       value: mapData.battle_royale.current.remainingTimer,
