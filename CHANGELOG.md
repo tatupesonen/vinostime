@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/tatupesonen/vinostime/compare/v0.0.4...v0.0.5) (2021-10-23)
+
+
+### Features
+
+* add help command, improve container, additional types and injectables ([4b33dad](https://github.com/tatupesonen/vinostime/commit/4b33dada66ea14a5e9380e3ba2d5933c0d43ab10))
+* warn the user if they are about to play a terrible map ([49421c6](https://github.com/tatupesonen/vinostime/commit/49421c6d4eb27cb39b2189c2342c2d0a83269333))
+
 ### [0.0.4](https://github.com/tatupesonen/vinostime/compare/v0.0.3...v0.0.4) (2021-10-23)
 
 
