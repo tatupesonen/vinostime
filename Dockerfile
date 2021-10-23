@@ -1,12 +1,9 @@
-FROM node:16-alpine
-
-RUN npm i -g yarn
+FROM node:16-alpine as base
 
 RUN mkdir /app
 COPY package.json jest.config.js yarn.lock tsconfig.json app/
 
 COPY src/ /app/src
-COPY tests/ /app/tests
 WORKDIR /app
 
 RUN rm -rf node_modules && yarn install --frozen-lockfile
@@ -16,4 +13,6 @@ CMD yarn jest --passWithNoTests
 
 from base as build
 RUN yarn build
+
+from build as start
 CMD ["node", "./build/main/src/index.js"]

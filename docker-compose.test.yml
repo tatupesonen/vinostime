@@ -6,3 +6,4 @@ services:
       context: .
       target: test
     image: vinostime
+    env_file: .env

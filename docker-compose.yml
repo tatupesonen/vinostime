@@ -1,11 +1,8 @@
 version: '3.7'
 services:
-  test:
-    depends on: bot
-    container_name: vinostime-test
   bot:
     container_name: vinostime
-    image: nnari/vinostime:latest
+    image: vinostime:latest
     restart: always
     volumes:
       - ./vinostime-logs:/app/logs
