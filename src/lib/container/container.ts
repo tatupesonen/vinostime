@@ -1,6 +1,7 @@
 export const DITypes = {
   client: 'client',
   apexLegendsService: 'apexLegendsService',
+  apexLegendsApi: 'apexLegendsApi',
   commands: 'commands',
   prefix: 'prefix',
   botInfo: 'botInfo',

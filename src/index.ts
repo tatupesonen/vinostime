@@ -1,3 +1,4 @@
+import { AxiosInstance } from 'axios';
 import { Client } from 'discord.js';
 import dotenv from 'dotenv';
 import { readdirSync } from 'fs';
@@ -9,6 +10,7 @@ import { ICommands } from './lib/interfaces/ICommand';
 dotenv.config();
 
 import { ApexLegendsService } from './lib/service/ApexLegendsService';
+import { createApiBases } from './lib/util/APIBase';
 import { logger } from './lib/util/logger';
 
 const bootstrap = async () => {
@@ -28,9 +30,15 @@ const bootstrap = async () => {
     logger.verbose('Imported command ' + command.default.name);
   });
 
+  // Create API base(s)
+  const { ApexLegendsAPI } = createApiBases(botInfo);
+
   // Register commands
   container.set<ICommands>(commands, DITypes.commands);
   container.set<string>(prefix, DITypes.prefix);
+  
+  // Register API bases
+  container.set<AxiosInstance>(ApexLegendsAPI, DITypes.apexLegendsApi);
 
   // Create bot
   const { client: bot } = await createBot(container);

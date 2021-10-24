@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { AxiosInstance } from 'axios';
 import { Client, EmbedField, Emoji, MessageEmbed } from 'discord.js';
 import { Container, DITypes } from '../container/container';
 import { IApexLegendsService } from '../interfaces/IApexLegendsService';
@@ -7,21 +7,37 @@ import { MapData } from '../interfaces/IApexMapData';
 type TextConvertable = Emoji | string;
 
 export class ApexLegendsService implements IApexLegendsService {
-  public constructor(private readonly container: Container) {}
+  apiBase: AxiosInstance;
+  public constructor(private readonly container: Container) {
+    this.apiBase = container.getByKey<AxiosInstance>(DITypes.apexLegendsApi);
+  }
+
   private async getMap(): Promise<MapData> {
-    const { data } = await axios.get(
-      `https://api.mozambiquehe.re/maprotation?version=2&auth=${process.env.MOZAMBIQUE_HERE}`
-    );
+    const { data } = await this.apiBase.get(`/maprotation?version=2`);
     return data;
   }
 
   private getEmoji(): TextConvertable {
     const client = this.container.getByKey<Client>(DITypes.client);
-    return client.emojis.cache.find(e => e.name === "vinostime") ?? ":))"
+    return client.emojis.cache.find((e) => e.name === 'vinostime') ?? ':))';
   }
 
   public async getMapEmbed(): Promise<MessageEmbed> {
-    const mapData = await this.getMap();
+    let mapData;
+    try {
+      mapData = await this.getMap();
+    } catch (err) {
+      return new MessageEmbed({
+        fields: [
+          {
+            name: 'API Down?',
+            value:
+              'Looks like the Apex Legends API is having some issues right now. Exceeded timeout of 5000ms for query',
+            inline: false,
+          },
+        ],
+      });
+    }
     const embed = new MessageEmbed();
     let title;
     switch (mapData.battle_royale.current.map) {
