@@ -34,6 +34,13 @@ export const createBot = async (container: Container) => {
 
   client.on('messageCreate', (message) => {
     if (message.author.bot) return;
+    if (message.content.includes("nnari")) {
+      try {
+      message.channel.send("nnari oni hapaska");
+      } catch (err) {
+        logger.warn("Couldn't post in " + message.channel.id)
+      }
+    }
     if (
       message.mentions.has(client.user, {
         ignoreEveryone: true,
