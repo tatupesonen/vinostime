@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/tatupesonen/vinostime/compare/v1.0.0...v1.1.0) (2021-10-24)
+
+
+### Features
+
+* add high tech feature ([6bd6a72](https://github.com/tatupesonen/vinostime/commit/6bd6a7253b2910002a7f4d40deeecf19e09a887a))
+
 ## [1.0.0](https://github.com/tatupesonen/vinostime/compare/v0.1.1...v1.0.0) (2021-10-24)
 
 
