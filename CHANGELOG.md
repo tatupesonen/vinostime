@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/tatupesonen/vinostime/compare/v0.1.1...v1.0.0) (2021-10-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* **api:** add API base
+
+### Features
+
+* **api:** add API base ([6cafe5b](https://github.com/tatupesonen/vinostime/commit/6cafe5be9a246b5c2c91c1d4714266222b1751f4))
+
 ### [0.1.1](https://github.com/tatupesonen/vinostime/compare/v0.1.0...v0.1.1) (2021-10-23)
 
 
