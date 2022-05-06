@@ -40,6 +40,12 @@ export const createBot = async (container: Container) => {
       } catch (err) {
         logger.warn("Couldn't post in " + message.channel.id)
       }
+    } else if (message.content.includes("samppa") || message.content.includes("172760365682130945")) {
+      try {
+        message.channel.send("missä samppa");
+      } catch (err) {
+        logger.warn("Couldn't post in " + message.channel.id)
+      }
     }
     if (
       message.mentions.has(client.user, {
