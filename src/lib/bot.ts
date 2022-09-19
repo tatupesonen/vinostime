@@ -54,6 +54,13 @@ export const createBot = async (container: Container) => {
         logger.warn("Couldn't post in " + message.channel.id)
       }
     }
+    else if (message.content.includes("tiki")) {
+      try {
+        message.channel.send("~~maini~~ HUTTI HUTTI HUTTI HUTTI");
+      } catch (err) {
+        logger.warn("Couldn't post in " + message.channel.id)
+      }
+    }
     if (
       message.mentions.has(client.user, {
         ignoreEveryone: true,
